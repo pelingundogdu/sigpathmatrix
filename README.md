@@ -1,6 +1,22 @@
+<p style="text-align: center"><img src="https://github.com/user-attachments/assets/1a4abb89-74ea-41af-971c-138ed490daeb"></p>
 
+<!-- <p style="text-align: center"><img src="https://github.com/user-attachments/assets/4ac0f261-58b0-43da-a43e-d9fd29fc1d92"></p> -->
 
-***
+<center>
+
+[![PyPI version](https://img.shields.io/pypi/v/sigpathmatrix.svg?color=pink)](https://pypi.org/project/sigpathmatrix/)
+![PyPI - License](https://img.shields.io/pypi/l/sigpathmatrix)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pelingundogdu/sigpathmatrix)
+![GitHub stars](https://img.shields.io/github/stars/pelingundogdu/sigpathmatrix)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/pelingundogdu/sigpathmatrix)
+![GitHub issues](https://img.shields.io/github/issues/pelingundogdu/sigpathmatrix)
+![GitHub forks](https://img.shields.io/github/forks/pelingundogdu/sigpathmatrix)
+
+</center>
+
+# 
+
 # sigpathmatrix: **SIG**naling **PATH**way/circuit **MATRIX** generator 
 <!-- # SigPrimedNet -- Signaling Pathway/Circuit Matrix Generator -->
 
