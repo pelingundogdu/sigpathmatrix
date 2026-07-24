@@ -1,6 +1,13 @@
+
+
+
+<!-- # SigPrimedNet -- Signaling Pathway/Circuit Matrix Generator -->
+
+
 <p style="text-align: center"><img src="https://github.com/user-attachments/assets/1a4abb89-74ea-41af-971c-138ed490daeb"></p>
 
 <!-- <p style="text-align: center"><img src="https://github.com/user-attachments/assets/4ac0f261-58b0-43da-a43e-d9fd29fc1d92"></p> -->
+
 
 <div align="center">
 
@@ -18,7 +25,6 @@
 # 
 
 # sigpathmatrix: **SIG**naling **PATH**way/circuit **MATRIX** generator 
-<!-- # SigPrimedNet -- Signaling Pathway/Circuit Matrix Generator -->
 
 **sigpathmatrix** is a Python package that collects and exports signaling pathway and circuit information. This package contains helper functions that are using to generate the biological prior knowledge detail for the **SigPrimedNet [1]** network. The curated matrices specify the relationships between genes and corresponding pathway/circuit they belong to.
 
@@ -54,7 +60,7 @@ GPL-3.0 *(for detail, please see LICENSE)*
 The main function name is ```default_pbk_hipathia``` which calls the corresponding functions to collect and export signaling pathways/circuits details for the given organims. The main function requires 3 parameters which are called ```-sp or --species``` for organism detail and the other two are for disease-associated keywords and list, ```-dk or --disease_keyword```  and ```-dl or --disease_list```, respectively.
 
 <!-- ```
-python -m sigPrimedNet_pbk.default_pbk_hipathia --species [OGRANISM]
+python -m sigpathmatrix.default_pbk_hipathia --species [OGRANISM]
 ``` -->
 
 ```
@@ -74,7 +80,7 @@ python -m sigPrimedNet_pbk.default_pbk_hipathia --species [OGRANISM]
 >
 > The working directory in terminal should be the parent path of the user's project folder while the execution is in process.
 > 
-> In addition, during the execution, the package is modify ```PATH``` information of ```PYTHON``` and ```R``` to be able to complete the data collection and exportation successfully. The updates are written into the ```.env ``` file which also should be located in parent path of the user's project folder. _(please see the [`folder structure tree`](#folder-structure-tree-after-execution-completed) for more detail)_
+> In addition, during the execution, the package is modify ```PATH``` information of ```PYTHON``` and ```R``` to be able to complete the data collection and exportation successfully. The updates are written into the ```.env ``` file which also should be located in parent path of the user's project folder. _(please see the [`folder structure tree`](#folder-structure-after-execution-completed) for more detail)_
 > 
 > </br>
 > 
@@ -106,8 +112,11 @@ The package comes with a set of built‑in default definitions that are specific
 </br>
 
 ## Parameter details 
+
+Please check for more details about parameter definition and structure, 
 + [`Organism Selection`](#organism-selection)
 + [`Disease-associated Pathway Elimination`](#disease-associated-pathway-elimination)
++ [`An overview for updated ```.env``` file with customize lists`](#an-overview-for-updated-env-file-with-customize-lists)
 
 </br>
 
@@ -120,9 +129,9 @@ The package has an embedded dictionary for two organism _(```homo sapiens (hsa)`
 GA_DICT = {'hsa':'org.Hs.eg.db', 'mmu':'org.Mm.eg.db'}
 ```
 
-> _Note, if the user wants to use different organism rather than ```hsa``` and ```mmu```, the information should be added into ```.env``` file into ```GA_DICT``` dictionary with a key and proper ```genome wide annotation``` detail. One crucial detail in this step is that the ```genome wide annotation``` naming should has same as defined in [`Bioconductor AnnotationData Package`](https://bioconductor.org/packages/3.23/data/annotation)._
+> _Note, if the user wants to use different organism rather than ```hsa``` and ```mmu```, the information should be added into ```.env``` file into ```GA_DICT_CUSTOM``` dictionary with a key and proper ```genome wide annotation``` detail. One crucial detail in this step is that the ```genome wide annotation``` naming should has same as defined in [`Bioconductor AnnotationData Package`](https://bioconductor.org/packages/3.23/data/annotation)._
 > ```
-> GA_DICT = {'[KEY1]':'[GENOME_WIDE_ANNOTATION1]', '[KEY2]':'[GENOME_WIDE_ANNOTATION2]'}
+> GA_DICT_CUSTOM = {'[KEY1]':'[GENOME_WIDE_ANNOTATION1]', '[KEY2]':'[GENOME_WIDE_ANNOTATION2]'}
 > ```
 
 </br>
@@ -140,6 +149,35 @@ DISEASE_LIST = ['Long-term depression', 'Insulin resistance', 'Measles'
                 , 'Toxoplasmosis', 'Tuberculosis', 'Influenza A', 'Glioma', 'Melanoma']
 ```
 
+
+###  An overview for updated ```.env``` file with customize lists
+
+The user can have own custom variable definition in ```.env``` file but at the end of the execution the the file will have,
++ Two environment definitions for both ```PYTHON``` and ```R```, which are called ```SPN_PYTHON_PATH```and ```R_HOME``` respectively,
++ customize species-genome wide annotation pair definition in ```GA_DICT_CUSTOM``` variable, abd
++ list using in elimination of disease-associated pathway with desired naming. _(In given example below, the naming for both lists for pathway naming and keyword are defined as ```CUSTOM_DISEASE_LIST``` and ```CUSTOM_DISEASE_KEYWORD```, respectively. )_
+
+An example for ```.env```,
+
+> ```
+> ....
+>      [USER'S VARIABLES IF THERE IS ANY]
+> ....
+> SPN_PYTHON_PATH='[PATH_of_ACTIVE_ENVIRONMENT]/bin/python'
+> R_HOME='[PATH_of_ACTIVE_ENVIRONMENT]/lib/R'
+> # DEFINITION of {[SPECIES] : [GENOME_WIDE_ANNOTATION]} PAIRS
+> GA_DICT_CUSTOM={'rno':'org.Rn.eg.db'}
+> # DISEASE-ASSOCIATED PATHWAY ELIMINITATION
+> CUSTOM_DISEASE_LIST='["Long-term depression","Insulin resistance","Measles","Amyotrophic lateral sclerosis (ALS)","Alcoholism","Shigellosis","Pertussis","Legionellosis","Leishmaniasis","Toxoplasmosis","Tuberculosis","Influenza A","Glioma","Melanoma"]'
+> CUSTOM_DISEASE_KEYWORD='["disease","cancer","leukemia","infection","virus","addiction","anemia","cell carcinoma","diabet","Hepatitis"]'
+> # AN EMPTY LIST DEFINITION
+> # ALTERATIVE #1
+> CUSTOM_DISEASE_LIST_EMPTY="[]"
+> CUSTOM_DISEASE_KEYWORD_EMPTY="[]"
+> # ALTERATIVE #2
+> CUSTOM_DISEASE_LIST_EMPTY2=""
+> CUSTOM_DISEASE_KEYWORD_EMPTY2=""
+> ```
 
 
 
