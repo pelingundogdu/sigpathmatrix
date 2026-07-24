@@ -1,0 +1,8 @@
+name: env_sigpathmatrix
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.13=hc5f7cf0_3
+  - r-base=4.4.1=h1dca405_0
+  - anaconda
+  
