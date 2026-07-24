@@ -1,0 +1,33 @@
+# conda_channels:
+#   - conda-forge
+#   - bioconda
+# conda_packages:
+#   - r-base
+#   - rpy2
+#   - pandas
+#   - yaml
+#   - r-reticulate
+# bioconda_packages:
+#   - bioconductor-hipathia
+# Conda channels for package installation
+conda_channels:
+  - conda-forge      # Primary channel for Python packages
+  - bioconda         # For bioinformatics packages
+# Python and R packages
+conda_packages:
+  # Python packages
+  # - pandas
+  # - yaml
+  - rpy2              # R interface for Python
+  # - pytz
+  # R packages
+  # - r-base            # Base R installation
+  - r-reticulate      # R interface for Python (allows R to call Python)
+  - r-logging         # Logging package for R
+  - r-stringr         # String manipulation in R
+  - r-argparse        # Command-line argument parsing for R
+  - python-dotenv
+  # - r-dotenv          # Environment variable management for R
+# BioConductor packages (from bioconda channel)
+bioconda_packages:
+  - bioconductor-hipathia  # HiPathia package
