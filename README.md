@@ -2,7 +2,7 @@
 
 <!-- <p style="text-align: center"><img src="https://github.com/user-attachments/assets/4ac0f261-58b0-43da-a43e-d9fd29fc1d92"></p> -->
 
-<center>
+<div align="center">
 
 [![PyPI version](https://img.shields.io/pypi/v/sigpathmatrix.svg?color=pink)](https://pypi.org/project/sigpathmatrix/)
 ![PyPI - License](https://img.shields.io/pypi/l/sigpathmatrix)
@@ -13,7 +13,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/pelingundogdu/sigpathmatrix)
 ![GitHub forks](https://img.shields.io/github/forks/pelingundogdu/sigpathmatrix)
 
-</center>
+</div>
 
 # 
 
