@@ -251,17 +251,14 @@ INFO:sigpathmatrix.default_pbk_hipathia:           NAME of the GENERATED MATRIX 
 
 > _Note, [Step 1](#step-1---adding-the-yaml-file-into-project-folder), [Step 2](#step-2---curation-of-python-environment-and-activate-it)  and [Step 3](#step-3---adding-dependencies) explained in [Example A](#example---a----usage-with-embedded-variables) should be completed before continue the next step._
 
-The given example is reading custom disease-associated list for a homo-sapiens (hsa) from ```.env``` file.
+The given example is reading custom disease-associated list for both pathways and keywords (```CUSTOM_DISEASE_LIST``` and ```CUSTOM_DISEASE_KEYWORD```, respectively) for a homo-sapiens (hsa) as well as the customize organism which is not embedded into package (i.e, ```rno```) from ```.env``` file.
 
 Definition of custom disease-associated list in ```.env``` file,
 ```
 ....
+GA_DICT_CUSTOM={''rno':'org.Rn.eg.db'}
 CUSTOM_DISEASE_LIST='["Long-term depression","Insulin resistance","Measles","Amyotrophic lateral sclerosis (ALS)","Alcoholism","Shigellosis","Pertussis","Legionellosis","Leishmaniasis","Toxoplasmosis","Tuberculosis","Influenza A","Glioma","Melanoma"]'
 CUSTOM_DISEASE_KEYWORD='["disease","cancer","leukemia","infection","virus","addiction","anemia","cell carcinoma","diabet","Hepatitis"]'
-CUSTOM_DISEASE_LIST_EMPTY="[]"
-CUSTOM_DISEASE_KEYWORD_EMPTY="[]"
-CUSTOM_DISEASE_LIST_EMPTY2=""
-CUSTOM_DISEASE_KEYWORD_EMPTY2=""
 ....
 ```
 
@@ -271,5 +268,5 @@ Usage with custom disease-associated list in ```.env``` file,
 ```
 Other usage example,
 ``` diff
-+ (env_sigpathmatrix) USER@USER:[PARENT_FOLDER]$ $ source .env && MAIN_sigpathmatrix --species mmu -dl "$CUSTOM_DISEASE_LIST_EMPTY" -dk "$CUSTOM_DISEASE_KEYWORD_EMPTY"
++ (env_sigpathmatrix) USER@USER:[PARENT_FOLDER]$ $ source .env && MAIN_sigpathmatrix --species rno -dl "$CUSTOM_DISEASE_LIST_EMPTY" -dk "$CUSTOM_DISEASE_KEYWORD_EMPTY"
 ```
