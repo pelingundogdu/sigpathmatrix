@@ -2,7 +2,7 @@
 name = "sigpathmatrix"
 version = "1.0.0"
 authors = [
-  { name="Pelin Gundogdu", github="https://github.com/pelingundogdu/" },
+  { name="Pelin Gundogdu"},
 ]
 description = "The default prior biological knowledge using in sigPrimedNet network"
 readme = "README.md"
