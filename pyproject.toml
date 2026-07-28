@@ -17,15 +17,15 @@ license = "GPL-3.0-or-later"
 dependencies = [
     # "pandas>=2.3.3",
     # "PyYAML>=6.0.3",
-    "python=3.12.13=hc5f7cf0_3",
-    "r-base=4.4.1=h1dca405_0",
-    "rpy2=3.6.6=py312r44h4bada26_1",            # R interface for Python
-    "r-reticulate=1.46.0=r44h3697838_0 ",       # R interface for Python (allows R to call Python)
-    "r-logging=0.10_111=r44hc72bb7e_0",         # Logging package for R
-    "r-stringr=1.6.0=r44h785f33e_0",            # String manipulation in R
-    "r-argparse=2.3.1=r44hc72bb7e_0",           # Command-line argument parsing for R
-    "python-dotenv=1.2.2=pyhcf101f3_0",
-    "bioconductor-hipathia=3.6.0=r44hdfd78af_0" # HiPathia package
+    "python>=3.12.13",
+    "r-base>=4.4.1",
+    "rpy2>=3.6.6",                 # R interface for Python
+    "r-reticulate>=1.46.0",        # R interface for Python (allows R to call Python)
+    "r-logging>=0.10_111",         # Logging package for R
+    "r-stringr>=1.6.0",            # String manipulation in R
+    "r-argparse>=2.3.1",           # Command-line argument parsing for R
+    "python-dotenv>=1.2.2",
+    "bioconductor-hipathia>=3.6.0" # HiPathia package
 ]
 
 [project.urls]
