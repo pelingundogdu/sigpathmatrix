@@ -26,6 +26,9 @@ logger.info(f'           Dependencies installation is started .... ')
 from .utils.package_env_manager import run_dependency_installer, setup_project_env
 
 def main():
+    '''
+    The entry points of downloading dependency list
+    '''
     try:
         run_dependency_installer()
         logger.info(f'           ✅ Dependencies installation is completed! \n')

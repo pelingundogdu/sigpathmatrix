@@ -4,9 +4,9 @@
 <!-- # SigPrimedNet -- Signaling Pathway/Circuit Matrix Generator -->
 
 
-<p style="text-align: center"><img src="https://github.com/user-attachments/assets/1a4abb89-74ea-41af-971c-138ed490daeb"></p>
+<p style="text-align: center"><img src="https://github.com/user-attachments/assets/1a4abb89-74ea-41af-971c-138ed490daeb" style="max-width: 100%; height: auto;"></p>
 
-<!-- <p style="text-align: center"><img src="https://github.com/user-attachments/assets/4ac0f261-58b0-43da-a43e-d9fd29fc1d92"></p> -->
+<!-- <p style="text-align: center"><img src="https://github.com/user-attachments/assets/4ac0f261-58b0-43da-a43e-d9fd29fc1d92" style="max-width: 100%; height: auto;"></p> -->
 
 
 <div align="center">

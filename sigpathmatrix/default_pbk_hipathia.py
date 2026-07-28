@@ -192,6 +192,9 @@ def process_default_pbk(species:str
         logger.info('           NAME of the GENERATED MATRIX FOR CIRCUITS IS   ---    hsc_pbk_hsa.txt')
 
 def main():
+    ''' 
+    The entry point of collecting and exporting signaling pathways/circuits matrix
+    '''
     parser = argparse.ArgumentParser(description='Collecting default PBK knowledge from HiPathia package')
     parser.add_argument('-sp', '--species'
                         , help='organism detail, such as hsa for homo sapiens, mmu for mus musculus, etc.')

@@ -56,10 +56,19 @@ logging.getLogger('rpy2.rinterface_lib.callbacks').disabled = True
 
 # from .hipathia.collect_bio_layer import collect_hipathia_pathway, remove_disease_pathways
 # from .utils.helpers import ConfigLoader
-from .utils.path_manager import paths, ProjectPaths
+from .hipathia import collect_bio_layer, py_collect_gene_entrezid
+from .utils import package_env_manager, path_manager
+from .default_pbk_hipathia import *
+from .run_dependency import *
+from .spn_config import *
 
-
-__all__ = ['paths', 'ProjectPaths'
+__all__ = ['default_pbk_hipathia',
+           'run_dependency',
+           'collect_bio_layer',
+           'py_collect_gene_entrezid',
+           'package_env_manager',
+           'path_manager',
+           'spn_config'
         #    , 'ConfigLoader'
         # , 'collect_hipathia_pathway', 'remove_disease_pathways'
         ]
