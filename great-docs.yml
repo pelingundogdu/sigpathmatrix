@@ -137,3 +137,11 @@ jupyter: python3
 #   enabled: true              # Enable CLI documentation
 #   module: my_package.cli     # Module containing Click commands
 #   name: cli                  # Name of the Click command object
+
+# Theming
+navbar_style: peach
+dark_mode_toggle: true
+
+nav_icons:
+  navbar:
+    Reference: book-marked
